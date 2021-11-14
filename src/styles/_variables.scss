@@ -1,0 +1,44 @@
+/* Borders
+****************************************** */
+$border: 2px solid $c-black;
+$border-radius-xsmall: 6px;
+$border-radius-small: 25px;
+$border-radius-medium: 30px;
+$border-radius-round: 50%;
+
+/* Fonts
+****************************************** */
+$font-poppins: "Poppins", sans-serif;
+$font-base: $font-poppins;
+$font-heading: $font-poppins;
+$font-size-base: 1.6rem;
+
+/* Wrappers
+****************************************** */
+$wrapper: 1400px;
+
+/* Paddings, Margins
+****************************************** */
+$padding-wrapper: 2rem;
+
+/* Box-shadows
+****************************************** */
+$box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+$box-shadow-hover: 0 10px 20px rgb(0 0 0 / 19%),
+  0 6px 6px rgb(0 0 0 / 23%);
+
+/* Transition
+****************************************** */
+$transition-time: 0.3s;
+$transition-animation: ease-in-out;
+
+/* Z-index
+****************************************** */
+$z-index: (
+  underground: -1,
+  ground: 1,
+  overground: 2,
+  header: 10,
+  topmodaloverlay: 9998,
+  topmodal: 9999,
+);

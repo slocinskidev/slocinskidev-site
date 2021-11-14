@@ -1,38 +1,78 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: 'SLOCINSKI.DEV - Blog',
+    author: {
+      name: 'Eryk Słociński',
+      summary: 'Frontend developer from Żory.',
+    },
+    description: 'Frontend developer blog! Created for sharing knowledge!',
+    siteUrl: 'http://slocinski.dev/',
+    social: {
+      twitter: 'slocinskidev',
+    },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-sass',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        additionalData: "@use 'globals' as *;",
+        sassOptions: {
+          includePaths: [`${__dirname}/src/styles`],
+        },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
+        files: ['**/*.{css,sass,scss}'],
+      },
+      resolve: '@danbruegge/gatsby-plugin-stylelint',
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        layout: path.join(__dirname, 'src/layout'),
+        styles: path.join(__dirname, 'src/styles'),
+        assets: path.join(__dirname, 'src/assets'),
+        common: path.join(__dirname, 'src/common'),
+        components: path.join(__dirname, 'src/components'),
+        containers: path.join(__dirname, 'src/containers'),
+        pages: path.join(__dirname, 'src/pages'),
+        templates: path.join(__dirname, 'src/templates'),
+        types: path.join(__dirname, 'src/types'),
+        utils: path.join(__dirname, 'src/utils'),
+        src: path.join(__dirname, 'src'),
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'slocinski-dev-website',
+        short_name: 'slocinski-dev',
+        start_url: '/',
+        background_color: '#fff',
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        display: 'minimal-ui',
+        icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

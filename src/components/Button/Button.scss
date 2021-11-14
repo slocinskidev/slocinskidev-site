@@ -1,0 +1,11 @@
+.button {
+  color: $c-primary;
+  background-color: transparent;
+  border: 3px solid $c-primary;
+  padding: 1.4rem 3rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
