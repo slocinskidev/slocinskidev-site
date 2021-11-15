@@ -5,7 +5,8 @@ import Seo from 'common/Seo';
 
 const Homepage = () => (
   <Layout>
-    <Seo title="All posts" />
+    <Seo title="Homepage" />
+    <h1>Homepage</h1>
   </Layout>
 );
 

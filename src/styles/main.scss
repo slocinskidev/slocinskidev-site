@@ -4,6 +4,7 @@
 html {
   font-size: 62.5%; // 1rem => 10px
   box-sizing: border-box;
+  height: fill-available;
 }
 
 *,
@@ -16,4 +17,6 @@ body {
   font-size: $font-size-base;
   font-family: $font-base;
   background-color: $c-pageBackground;
+  min-height: fill-available;
+  overflow-x: hidden;
 }

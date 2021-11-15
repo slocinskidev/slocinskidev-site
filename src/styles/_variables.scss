@@ -8,7 +8,7 @@ $border-radius-round: 50%;
 
 /* Fonts
 ****************************************** */
-$font-poppins: "Poppins", sans-serif;
+$font-poppins: 'Poppins', sans-serif;
 $font-base: $font-poppins;
 $font-heading: $font-poppins;
 $font-size-base: 1.6rem;
@@ -20,12 +20,6 @@ $wrapper: 1400px;
 /* Paddings, Margins
 ****************************************** */
 $padding-wrapper: 2rem;
-
-/* Box-shadows
-****************************************** */
-$box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
-$box-shadow-hover: 0 10px 20px rgb(0 0 0 / 19%),
-  0 6px 6px rgb(0 0 0 / 23%);
 
 /* Transition
 ****************************************** */

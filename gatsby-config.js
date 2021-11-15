@@ -3,12 +3,12 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'SLOCINSKI.DEV - Blog',
+    title: 'SLOCINSKI.DEV',
     author: {
       name: 'Eryk Słociński',
       summary: 'Frontend developer from Żory.',
     },
-    description: 'Frontend developer blog! Created for sharing knowledge!',
+    description: 'Frontend developer website! Created for sharing knowledge!',
     siteUrl: 'http://slocinski.dev/',
     social: {
       twitter: 'slocinskidev',
@@ -23,12 +23,6 @@ module.exports = {
           includePaths: [`${__dirname}/src/styles`],
         },
       },
-    },
-    {
-      options: {
-        files: ['**/*.{css,sass,scss}'],
-      },
-      resolve: '@danbruegge/gatsby-plugin-stylelint',
     },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
@@ -68,7 +62,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: 'minimal-ui',
-        icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/logo/logo.png', // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
