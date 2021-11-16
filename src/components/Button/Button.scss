@@ -1,11 +1,72 @@
 .button {
-  color: $c-primary;
+  color: $c-tertiary;
   background-color: transparent;
-  border: 3px solid $c-primary;
-  padding: 1.4rem 3rem;
+  border: 2px solid transparent;
+  padding: 1rem;
   font-weight: bold;
-  border-radius: 3rem;
-  text-transform: uppercase;
   font-size: 1.6rem;
   cursor: pointer;
+  appearance: none;
+  outline: none;
+  display: inline-flex;
+  position: relative;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &--link {
+    transition: transform $transition-duration $transition-animation;
+
+    &--icon {
+      svg {
+        margin-left: 1rem;
+        width: 25px;
+        color: $c-tertiary;
+      }
+    }
+
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
+
+  &--contained {
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    background-color: $c-primary;
+    border-color: $c-primary;
+    color: $c-white;
+    transition: transform $transition-duration $transition-animation;
+
+    &--icon {
+      svg {
+        margin-left: 1rem;
+        width: 25px;
+        color: $c-white;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+
+  &--outline {
+    border-radius: $border-radius-round;
+    border-color: $c-gray6;
+    transition: transform $transition-duration $transition-animation;
+
+    &--icon {
+      svg {
+        width: 25px;
+        color: $c-tertiary;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }

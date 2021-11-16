@@ -1,2 +1,8 @@
 .header {
+  display: grid;
+  place-items: center;
+
+  &__logo {
+    width: 280px;
+  }
 }
