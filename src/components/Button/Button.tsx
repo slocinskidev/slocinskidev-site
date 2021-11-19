@@ -1,9 +1,8 @@
 import React, { forwardRef } from 'react';
 import classNames from 'classnames';
 
-import ButtonBase from 'common/ButtonBase';
-import RightArrow from 'common/IconsSVG/RightArrow';
-import Link from 'common/Link';
+import RightArrow from 'common/Icons/RightArrow';
+import { Link } from 'gatsby';
 
 import { BUTTON, ButtonProps } from './models.d';
 
@@ -13,20 +12,20 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       variant = BUTTON.VARIANT.LINK,
-      icon,
+      isIcon,
       link,
       children = '',
-      customClass,
-      ...baseProps
+      className,
+      ...props
     },
     ref
   ) => {
-    const buttonClasses = classNames(customClass, {
+    const buttonClasses = classNames('button', className, {
       [`button--${variant}`]: variant,
-      [`button--${variant}--icon`]: icon,
+      [`button--${variant}--icon`]: isIcon,
     });
 
-    const showIcon = icon ? <RightArrow /> : null;
+    const showIcon = isIcon ? <RightArrow /> : null;
 
     const buttonContent = (
       <span className="button__content">
@@ -35,17 +34,17 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       </span>
     );
 
-    const buttonReturn = link ? (
-      <Link customClass={`button ${buttonClasses}`} url={link}>
+    const renderButton = link ? (
+      <Link className={buttonClasses} to={link}>
         {buttonContent}
       </Link>
     ) : (
-      <ButtonBase className={buttonClasses} {...baseProps} ref={ref}>
+      <button className={buttonClasses} {...props} ref={ref}>
         {buttonContent}
-      </ButtonBase>
+      </button>
     );
 
-    return buttonReturn;
+    return renderButton;
   }
 );
 

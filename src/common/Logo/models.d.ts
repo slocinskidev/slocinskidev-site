@@ -6,8 +6,9 @@ export namespace LOGO {
   }
 }
 export interface LogoProps {
-  alt: string;
+  logoAlt: string;
+  linkAlt?: string;
   variant?: LOGO.VARIANT;
-  url?: string;
+  link?: string;
   customClass?: string;
 }

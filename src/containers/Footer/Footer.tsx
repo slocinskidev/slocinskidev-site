@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'common/Link';
+import { Link } from 'gatsby';
 import { FOOTER_URL, FOOTER_TEXT, ROOT_PATH } from 'utils/constants';
 import Logo, { LOGO } from 'common/Logo';
 
@@ -9,12 +9,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Logo
-        url={ROOT_PATH}
+        link={ROOT_PATH}
         customClass="footer__logo"
-        alt="logo"
+        logoAlt="brand logo"
         variant={LOGO.VARIANT.TERTIARY}
       />
-      <Link url={FOOTER_URL}>
+      <Link to={FOOTER_URL}>
         <p className="footer__link">{FOOTER_TEXT}</p>
       </Link>
     </footer>

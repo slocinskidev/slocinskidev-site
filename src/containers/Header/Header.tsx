@@ -11,15 +11,15 @@ const Header = () => {
     <header className="header">
       <Logo
         variant={LOGO.VARIANT.SECONDARY}
-        alt="logo"
+        logoAlt="logo"
         customClass="header__logo"
-        url={ROOT_PATH}
+        link={ROOT_PATH}
       />
-      <Button variant={BUTTON.VARIANT.OUTLINE} icon />
-      <Button variant={BUTTON.VARIANT.CONTAINED} icon>
+      <Button variant={BUTTON.VARIANT.OUTLINE} isIcon />
+      <Button variant={BUTTON.VARIANT.CONTAINED} isIcon>
         Contained
       </Button>
-      <Button variant={BUTTON.VARIANT.LINK} icon>
+      <Button variant={BUTTON.VARIANT.LINK} isIcon>
         LINK
       </Button>
     </header>

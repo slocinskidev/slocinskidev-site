@@ -1,5 +1,3 @@
-import { ButtonBaseProps } from 'common/ButtonBase/models.d';
-
 export namespace BUTTON {
   export enum VARIANT {
     LINK = 'link',
@@ -8,9 +6,13 @@ export namespace BUTTON {
   }
 }
 
-export interface ButtonProps extends ButtonBaseProps {
+export interface ButtonProps
+  extends React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   variant?: BUTTON.VARIANT;
-  icon?: boolean;
+  isIcon?: boolean;
   link?: string;
-  customClass?: string;
+  className?: string;
 }
