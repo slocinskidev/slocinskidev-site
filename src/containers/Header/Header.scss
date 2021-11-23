@@ -1,8 +1,19 @@
 .header {
-  display: grid;
-  place-items: center;
+  padding: 1rem $padding-wrapper;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $wrapper;
+    margin: 0 auto;
+  }
 
   &__logo {
-    width: 280px;
+    width: 220px;
+
+    @include breakpoint(xs) {
+      width: 280px;
+    }
   }
 }

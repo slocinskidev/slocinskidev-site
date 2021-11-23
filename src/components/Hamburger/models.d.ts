@@ -1,3 +1,4 @@
 export interface HamburgerProps {
-  className?: string;
+  isActive: boolean;
+  setIsActive: React.Dispatch<React.SetStateAction<boolean>>;
 }

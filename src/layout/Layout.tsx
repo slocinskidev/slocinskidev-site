@@ -7,7 +7,7 @@ import './Layout.scss';
 const Layout: FC = ({ children }) => (
   <>
     <Header />
-    <main className="main">{children}</main>
+    <main className="layout">{children}</main>
     <Footer />
   </>
 );

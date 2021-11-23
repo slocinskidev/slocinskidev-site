@@ -1,3 +1,7 @@
+$bar-width: 35px;
+$bar-height: 4px;
+$bar-gap: 14px;
+
 .hamburger {
   cursor: pointer;
   width: 50px;
@@ -6,7 +10,12 @@
   display: grid;
   place-items: center;
   justify-content: center;
+  z-index: map-get($map: $z-index, $key: header);
   overflow: hidden;
+
+  @include breakpoint(md) {
+    display: none;
+  }
 
   &--active {
     .hamburger {
@@ -26,18 +35,18 @@
 
   &__bar {
     display: block;
-    border-radius: 10px;
-    width: 35px;
-    height: 4px;
+    border-radius: $border-radius-small;
+    width: $bar-width;
+    height: $bar-height;
     background-color: $c-tertiary;
     transition: background-color $transition-duration $transition-animation;
 
     &::before,
     &::after {
-      border-radius: 10px;
+      border-radius: $border-radius-small;
       content: '';
-      width: 35px;
-      height: 4px;
+      width: $bar-width;
+      height: $bar-height;
       background-color: $c-tertiary;
       display: block;
       position: absolute;
@@ -45,11 +54,11 @@
     }
 
     &::before {
-      top: 14px;
+      top: $bar-gap;
     }
 
     &::after {
-      bottom: 14px;
+      bottom: $bar-gap;
     }
   }
 }

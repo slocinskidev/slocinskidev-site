@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { FC } from 'react';
 import classNames from 'classnames';
+import { toggleState } from 'utils/toggleState';
+
+import { HamburgerProps } from './models';
 
 import './Hamburger.scss';
 
-const Hamburger = () => {
-  const [isActive, setIsActive] = React.useState<boolean>(false);
-
-  const toggleActive = () => {
-    setIsActive((prevState) => !prevState);
-  };
-
+const Hamburger: FC<HamburgerProps> = ({ isActive, setIsActive }) => {
   const hamburgerClasses = classNames('hamburger', {
     'hamburger--active': isActive,
   });
 
   return (
-    <button className={hamburgerClasses} onClick={() => toggleActive()}>
+    <button
+      className={hamburgerClasses}
+      onClick={() => toggleState(setIsActive)}
+    >
       <span className="hamburger__bar" />
     </button>
   );

@@ -1,0 +1,59 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: start;
+  justify-content: center;
+  background-color: $c-white;
+  z-index: map-get($map: $z-index, $key: navigation);
+  grid-template-rows: min-content auto;
+  color: $c-tertiary;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-animation,
+    visibility $transition-duration $transition-animation;
+
+  @include breakpoint(md) {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    justify-content: center;
+  }
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__logo {
+    margin-top: 10rem;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__list {
+    font-size: 3rem;
+
+    @include breakpoint(md) {
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    transition: transform $transition-duration $transition-animation;
+
+    &:hover {
+      transform: translateX(8px);
+    }
+  }
+}

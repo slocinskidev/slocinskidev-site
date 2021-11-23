@@ -2,7 +2,7 @@
 ****************************************** */
 $border: 2px solid $c-black;
 $border-radius-xsmall: 6px;
-$border-radius-small: 25px;
+$border-radius-small: 10px;
 $border-radius-medium: 30px;
 $border-radius-round: 50%;
 
@@ -15,7 +15,7 @@ $font-size-base: 1.6rem;
 
 /* Wrappers
 ****************************************** */
-$wrapper: 1400px;
+$wrapper: 1440px;
 
 /* Paddings, Margins
 ****************************************** */
@@ -32,6 +32,7 @@ $z-index: (
   underground: -1,
   ground: 1,
   overground: 2,
+  navigation: 9,
   header: 10,
   topmodaloverlay: 9998,
   topmodal: 9999,
