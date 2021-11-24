@@ -1,11 +1,10 @@
 .header {
-  padding: 1rem $padding-wrapper;
-
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: $wrapper;
+    padding: 1rem $padding-wrapper;
     margin: 0 auto;
   }
 
