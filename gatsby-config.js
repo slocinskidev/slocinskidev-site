@@ -6,9 +6,10 @@ module.exports = {
     title: 'SLOCINSKI.DEV',
     author: {
       name: 'Eryk Słociński',
-      summary: 'Frontend developer from Żory.',
+      summary:
+        'Jestem frontend developerem z Żor. Najlepiej mi po ciemnej stronie mocy Reakta, gdzie staram się go łączyć z TypeScriptem. 🔥',
     },
-    description: 'Frontend developer website! Created for sharing knowledge!',
+    description: 'O programowaniu frontendu okiem Eryka Słocińskiego',
     siteUrl: 'http://slocinski.dev/',
     social: {
       twitter: 'slocinskidev',

@@ -16,7 +16,9 @@ html {
 body {
   font-size: $font-size-base;
   font-family: $font-base;
+  font-weight: 500;
   background-color: $c-pageBackground;
+  color: $c-tertiary;
   min-height: fill-available;
   overflow-x: hidden;
 }
